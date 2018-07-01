@@ -1,0 +1,171 @@
+/* style.css */
+/* BASIC STYLINGS
+============================================================================= */
+* 								{ padding: 0px; margin: 0px; }
+
+div, header, nav, main, section, a { display: block; }
+
+main  						   { margin: 0 auto; }
+
+section 					   { width: 100%; }
+
+body                           { font-family: arial; overflow: hidden; color:#000000; background:#f7f7f7; }
+
+header 						   { height: 40px; background-color: #2f2f2f; margin-bottom: 3%; font-size: 30px; text-align: center; }
+
+h2                             { margin-bottom: 0.7em; }
+
+#main                          { background-image: url("../images/bac3.jpg");  }
+
+#mainHeader                    { background-color: unset; }
+
+#mainLink                      { display: block; text-decoration: none; display: relative; float:right;
+                                 margin-right: 1.5em; margin-top: 0.8em; font-weight: 700; font-size: 0.8em;
+                                 color:#073b6b; }
+
+#mainLink:hover                { color:#2a3946; }
+
+#welcome, #buxa                { color: #073b6b; font-size: 4em; font-weight: 700; position: relative;}
+
+#welcome                       { margin-left: 2.5em; margin-top: 1em; float: left; }
+
+#buxa                          { margin-top: 3em; float: left; }
+
+#heartIcon                     {margin-top: 3em; color: #000;}
+
+#camIcon                       {margin-top: 2em; color: #000;}
+
+#micIcon                       {margin-top: 1em; color: #000;}
+
+.logo 						   { display: block;background-image: url("../images/logo1.png"); width:117px;
+    							 height: 32px; position: relative; float: left; margin-top: 4px; }
+
+.container                     { width: 800px; } 
+
+.clear                         { clear:both; } 
+
+/* form styling */
+#form-container                { background:#ebebeb; margin-bottom:20px;
+                                 border-radius:5px; }
+
+#form-container .page-header   { background:#868686; margin:0; padding:30px; color:#fff;
+                                 border-top-left-radius:5px; border-top-right-radius:5px; }
+
+/* numbered buttons */
+#status-buttons                 {  }
+#status-buttons a               { color:#fff; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase; }
+#status-buttons a:hover         { text-decoration:none; }
+
+/* we will style the span as the circled number */
+#status-buttons span            { background:#080808; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px; 
+    							  border-radius:50%; }
+
+/* active buttons turn light green-blue*/
+#status-buttons a.active span   { background:#18b7a8; }
+
+h3, .h3                         { font-size: 24px; margin-bottom: 2em; }
+
+.btn-info                       { background-color: #728ca3; border-color: #728ca3; }
+
+.btn-info:hover                 { background-color: #2a3946; border-color: #2a3946; }
+
+.btn-danger                     { background-color: #e84635; border-color: #e84635; }
+
+.btn-danger:hover               { background-color: #962e23; border-color: #962e23; }
+
+#signinBtn                      { margin-left: 28%; width: 45%; }
+
+/*.btn-danger                     { position: fixed; bottom: 8em; margin-left: -2.5em; }
+*/
+
+/*.btn-block                      { position: fixed; bottom: 8em; margin-left: -2.5em; width: 20%; }*/
+
+/*#try { position: fixed; bottom: 8em; margin-left: -2.5em; width: 20%; }*/
+
+/* ANIMATION STYLINGS
+============================================================================= */
+#signup-form            { position:relative; min-height:300px; overflow:hidden; padding:30px; }
+#form-views             { width:auto; }
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#form-views.ng-enter,
+#form-views.ng-leave      { position:absolute; left:30px; right:30px;
+    transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease; 
+}
+
+/* enter animation */
+#form-views.ng-enter      { 
+    -webkit-animation:slideInRight 0.5s both ease;
+    -moz-animation:slideInRight 0.5s both ease;
+    animation:slideInRight 0.5s both ease; 
+}
+
+/* leave animation */
+#form-views.ng-leave       { 
+    -webkit-animation:slideOutLeft 0.5s both ease;
+    -moz-animation:slideOutLeft 0.5s both ease;
+    animation:slideOutLeft 0.5s both ease;   
+}
+
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the left */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-200%); }
+}
+@-moz-keyframes slideOutLeft {  
+    to      { -moz-transform: translateX(-200%); }
+}
+@-webkit-keyframes slideOutLeft {
+    to      { -webkit-transform: translateX(-200%); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(200%); }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { -moz-transform:translateX(200%); }
+    to      { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(200%); }
+    to      { -webkit-transform: translateX(0); }
+}
+
+
+/* MODEL BOX
+============================================================================= */
+
+.modal          {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; 
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Box */
+.modal-content {
+    background-color: #fefefe;
+    color: #000000;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+}
+
+#startBtn                   { margin-left: 43%; width: 13%; }
+
+/* The Close Button */
+.close                      { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
+
+.close:hover, .close:focus  { color: black; text-decoration: none; cursor: pointer; }

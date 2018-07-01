@@ -1,0 +1,23 @@
+{
+  "name": "sapir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buxa/BUXA_Client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buxa/BUXA_Client/issues"
+  },
+  "homepage": "https://github.com/buxa/BUXA_Client#readme",
+  "dependencies": {
+    "cloudinary-core": "^2.5.0",
+    "express": "^4.16.3"
+  }
+}

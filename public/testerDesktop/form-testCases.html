@@ -1,0 +1,19 @@
+<!-- form-testCase.html -->
+<div class="form-group" data-ng-init="init()">
+    <label>Test Cases</label>
+        <div class="form-group">
+            <div class="radio" ng-repeat="testCase in testCasesList">
+                <input type="radio" ng-model="formData.testCaseID" value="{{testCase.caseID}}">
+                <label>{{testCase.type}}</label>
+            </div>
+        </div>
+</div>
+
+<div id="try" class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+    <a ui-sref="form.collectionMeasureas" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+</div>
